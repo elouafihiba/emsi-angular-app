@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'emsiApp';
+  actions:Array<any>=[
+    {title:"Home","route":"/home",icon:"house"},
+    {title:"Products","route":"/products",icon:"search"},
+    {title:"NewProduct","route":"/new-product",icon:"safe"}
+  ];
+  currentAction:any;
+
+  setCurrentAction(action: any) {
+    this.currentAction=action;
+  }
 }
